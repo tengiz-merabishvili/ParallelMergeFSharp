@@ -15,12 +15,14 @@ let main argv =
         func()
         sw.Elapsed
 
+    //ფუნქცია ბეჭდავს ალგორითმის მუშაობის დროს და ელემენტების რაოდენობას
     let writeTime (sortCount:int) (timespan : TimeSpan) = 
         printfn "Sort took %f seconds : Element count = %i" timespan.TotalSeconds sortCount
     
     let parallelProcessCount = Environment.ProcessorCount
     let numberOfElements = 24
 
+    //დავბეჭდოთ ალგორითმის მუშაობის დრო და ელემენტების რაოდებობა
     recordTime (fun () ->
         Sort.parallelMergeSort(parallelProcessCount, numberOfElements)) 
     |> writeTime numberOfElements
