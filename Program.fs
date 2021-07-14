@@ -15,7 +15,7 @@ let main argv =
         func()
         sw.Elapsed
 
-    //ფუნქცია ბეჭდავს ალგორითმის მუშაობის დროს და ელემენტების რაოდენობას
+    // ფუნქცია ბეჭდავს ალგორითმის მუშაობის დროს და ელემენტების რაოდენობას
     let writeTime (sortCount:int) (timespan : TimeSpan) = 
         printfn "Sort took %f seconds : Element count = %i" timespan.TotalSeconds sortCount
     
